@@ -321,7 +321,7 @@
                            
                                <div id="ip"></div>
 <div id="address"></div>
-<? if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+<?php if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
     $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
     echo $ip_address;
 } else {

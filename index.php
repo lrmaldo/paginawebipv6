@@ -321,13 +321,8 @@
                            
                                <div id="ip"></div>
 <div id="address"></div>
-<?php if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-    $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
-    echo $ip_address;
-} else {
-    $ip_address = $_SERVER['REMOTE_ADDR'];
-    echo $ip_address ;
-}?>
+<?php $localIP = getHostByName(getHostName());
+echo $localIP?>
 <pre id="details"></pre>
                             </div>
 

@@ -295,7 +295,7 @@
                 $array_text = explode("", $result);
                 $oparray = preg_split('/\s+/', trim($result));
                 echo '<br>';
-                var_dump($oparray);
+                var_dump($oparray[13]);
                 ?>
                 <div class="col-lg-12 ">
 
@@ -314,7 +314,7 @@
                                     </tr>
                                     <tr>
                                         <td >Ipv4 del servidor:</td>
-                                        <td><? var_dump($oparray[11]); ?></td>
+                                        <td><? var_dump($oparray[9]); ?></td>
                                         
                                     </tr>
                                     <tr>

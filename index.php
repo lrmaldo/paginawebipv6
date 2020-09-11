@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -20,21 +20,7 @@
     <body id="page-top"style="background: blue ">
 <div>
 
-<?php
-if (!empty($_SERVER['HTTP_CLIENT_IP']))
-{
-     $ip=$_SERVER['HTTP_CLIENT_IP'];
-}
-elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
-{
-     $ip=$_SERVER['HTTP_X_FORWARDED_FOR'];
-}
-else
-{
-     $ip=$_SERVER['REMOTE_ADDR'];
-}
-print json_encode(array('ip' => $ip));
-?>
+
 
 </div>
         <!-- Navigation-->
@@ -258,13 +244,13 @@ print json_encode(array('ip' => $ip));
             </div>
         </section> -->
         <!-- Team-->
-        <section class="" id="team" >
-            <div class="container">
+        <section class="" style="" id="team" >
+            <div class="container"style="background: rgba(0, 0, 0, 0.5); height:300px;">
                <!--  <div class="text-center">
                     <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div> -->
-                <div class="row"style="background: rgba(0, 0, 0, 0.5); ">
+                <div class="row  ">
                     <div class="col-lg-4">
                         <div class="text-center">
                             <img class="img-fluid d-block mx-auto" src="logos/sattlink.png"  style="height: 150px; background-size: contain;" alt="" />
@@ -291,14 +277,7 @@ print json_encode(array('ip' => $ip));
                             <img class="img-fluid d-block mx-auto" heigth="50px" width="200px" src="./logos/wispmx-logo.png" style=" background-position: center; margin-left: auto; margin-top: 20px;
                             margin-right: auto; " alt="" />   
                             
-                            <div class="text-white">
-                                Mi IP es: <strong id="ipId" class="text-white"></strong>
-                                <br>
-                                Mi IPv6 es : <strong class="text-white" id="ipv6"></strong>
-                           
-                            <br>
-                            
-                            </div>
+                         
 
                         </div>
                             <!-- background-color: black; -->
@@ -307,6 +286,51 @@ print json_encode(array('ip' => $ip));
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a> -->
+                        </div>
+                    </div>
+                    <div class="row  ">
+                        <div class="col-lg-12 text-center">
+
+                            <div class="text-white ">
+                            <div class="table-responsive">
+                            <table class="table table-sm text-white " style="  margin: auto;width: 60% !important; ">
+                                        <thead>
+                                            <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                            <th scope="row">1</th>
+                                            <td><?$_SERVER['SERVER_ADDR']; ?></td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                        </tbody>
+                            </table>
+                            </div>
+                               Mi IP es: <strong id="ipId" class="text-white"></strong>
+                               <br>
+                               Mi IPv6 es : <strong class="text-white" id="ipv6"></strong>
+                          
+                               <br>
+                           
+                               <div id="ip"></div>
+<div id="address"></div>
+<? if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+    $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    print_r($ip_address);
+} else {
+    $ip_address = $_SERVER['REMOTE_ADDR'];
+    print_r($ip_address);
+}?>
+<pre id="details"></pre>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -600,5 +624,13 @@ print json_encode(array('ip' => $ip));
      console.log('Your ip is: ' +  data.ip);
 });
       </script> -->
+
+      <script>
+$.get("https://ipinfo.io", function (response) {
+    $("#ip").html("IP: " + response.ip);
+    $("#address").html("Ubicaci&#243;n: " + response.city + ", " + response.region);
+    $("#details").html(JSON.stringify(response, null, 4));
+}, "jsonp");
+</script>
     </body>
 </html>

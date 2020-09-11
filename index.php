@@ -328,12 +328,12 @@ echo '<br>';
 $command="nslookup web.satt-link.net  ";
 $result = shell_exec($command);
 echo $result;
-$array_text = explode(" ",$result);
+$array_text = explode("",$result);
 echo '<br>';
 echo $array_text[1];
 
 
-echo $localIPa;
+
 echo "<br>";
 
 if ( defined('AF_INET6') ) {

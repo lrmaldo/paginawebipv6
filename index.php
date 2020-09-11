@@ -296,6 +296,8 @@
                 $oparray = preg_split('/\s+/', trim($result));
                 echo '<br>';
                 var_dump($oparray[13]);
+                echo '<br>';
+                echo $oparray[13];
                 ?>
                 <div class="col-lg-12 ">
 

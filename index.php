@@ -326,9 +326,9 @@ echo $localIP;
 echo '<br>';
 
 $command="/sbin/nslookup web.satt-link.net  ";
-echo $localIP;
-$primer_resultado = explode(" ",$localIP);
-echo $primer_resultado[0];
+$localIPa = exec ($command);
+
+echo $localIPa;
 echo "<br>";
 
 if ( defined('AF_INET6') ) {

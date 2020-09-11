@@ -329,6 +329,9 @@ $command="nslookup web.satt-link.net  ";
 $result = shell_exec($command);
 echo $result;
 $array_text = explode("",$result);
+$oparray = preg_split('/\s+/', trim($result));
+echo '<br>';
+var_dump($oparray);
 echo '<br>';
 echo $array_text[1];
 

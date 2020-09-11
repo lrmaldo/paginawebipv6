@@ -273,7 +273,11 @@
                             
                             <div class="text-white">
                                 Mi IP es: <strong id="ipId" class="text-white"></strong>
-
+                                <br>
+                                Mi IPv6 es : <strong class="text-white" id="ipv6"></strong>
+                           
+                            <br>
+                            
                             </div>
 
                         </div>
@@ -291,12 +295,19 @@
                 </div> -->
             </div>
         </section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script type="text/javascript">
             function get_ip(obj){
                 document.getElementById('ipId').innerHTML = obj.ip;
             }
+
+
+           function get_ipv6(obj){
+            document.getElementById('ipv6').innerHTML = obj.ip;
+           }
         </script>
         <script type="text/javascript" src="https://api.ipify.org/?format=jsonp&callback=get_ip"></script>
+        <script type="text/javascript" src="https://api6.ipify.org/?format=jsonp&callback=get_ipv6"></script>
       </body>
      
         <!-- Clients-->

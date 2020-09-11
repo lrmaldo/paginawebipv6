@@ -1,49 +1,50 @@
-
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Página web con IPv6" />
-        <meta name="author" content="Ing. Leonardo Maldonado" />
-        <title>.</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top"style="background: blue ">
-<div>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Página web con IPv6" />
+    <meta name="author" content="Ing. Leonardo Maldonado" />
+    <title>.</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top" style="background: blue ">
+    <div>
 
 
 
-</div>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="" /></a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ml-1"></i>
-                </button>
+    </div>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="" /></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ml-1"></i>
+            </button>
 
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                </ul>
             </div>
-        </nav>
-        <!-- Masthead-->
+        </div>
+    </nav>
+    <!-- Masthead-->
     <!--     <header class="masthead">
             <div class="container">
                 <div class="masthead-subheading">Welcome To Our Studio!</div>
@@ -51,8 +52,8 @@
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
             </div>
         </header> -->
-        <!-- Services-->
-       <!--  <section class="page-section" id="services">
+    <!-- Services-->
+    <!--  <section class="page-section" id="services">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Services</h2>
@@ -86,8 +87,8 @@
                 </div>
             </div>
         </section> -->
-        <!-- Portfolio Grid-->
-       <!--  <section class="page-section bg-light" id="portfolio">
+    <!-- Portfolio Grid-->
+    <!--  <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Portfolio</h2>
@@ -181,8 +182,8 @@
                 </div>
             </div>
         </section> -->
-        <!-- About-->
-       <!--  <section class="page-section" id="about">
+    <!-- About-->
+    <!--  <section class="page-section" id="about">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">About</h2>
@@ -243,137 +244,164 @@
                 </ul>
             </div>
         </section> -->
-        <!-- Team-->
-        <section class="" style="" id="team" >
-            <div class="container"style="background: rgba(0, 0, 0, 0.5); height:300px;">
-               <!--  <div class="text-center">
+    <!-- Team-->
+    <section class="" style="" id="team">
+        <div class="container" style="background: rgba(0, 0, 0, 0.5); height:300px;">
+            <!--  <div class="text-center">
                     <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div> -->
-                <div class="row  ">
-                    <div class="col-lg-4">
-                        <div class="text-center">
-                            <img class="img-fluid d-block mx-auto" src="logos/sattlink.png"  style="height: 150px; background-size: contain;" alt="" />
-                           <!--  <h4>Kay Garland</h4>
+            <div class="row  ">
+                <div class="col-lg-4">
+                    <div class="text-center">
+                        <img class="img-fluid d-block mx-auto" src="logos/sattlink.png" style="height: 150px; background-size: contain;" alt="" />
+                        <!--  <h4>Kay Garland</h4>
                             <p class="text-muted">Lead Designer</p>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a> -->
-                        </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="">
-                            <img class="img-fluid d-block mx-auto"  src="./logos/lacnic.svg" class="img-fluid d-block" height="150px" width="280px" style="background-size: contain; background-position: center;margin-left: auto;
+                </div>
+                <div class="col-lg-4">
+                    <div class="">
+                        <img class="img-fluid d-block mx-auto" src="./logos/lacnic.svg" class="img-fluid d-block" height="150px" width="280px" style="background-size: contain; background-position: center;margin-left: auto;
                             margin-right: auto;" alt="" />
-                          <!--   <h4>Larry Parker</h4>
+                        <!--   <h4>Larry Parker</h4>
                             <p class="text-muted">Lead Marketer</p>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a> -->
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="">
-                            <img class="img-fluid d-block mx-auto" heigth="50px" width="200px" src="./logos/wispmx-logo.png" style=" background-position: center; margin-left: auto; margin-top: 20px;
-                            margin-right: auto; " alt="" />   
-                            
-                         
-
-                        </div>
-                            <!-- background-color: black; -->
-                           <!--  <h4>Diana Petersen</h4>
-                            <p class="text-muted">Lead Developer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a> -->
-                        </div>
-                    </div>
-                    <div class="row  ">
-                        <div class="col-lg-12 text-center">
-
-                            <div class="text-white ">
-                            <div class="table-responsive">
-                            <table class="table table-sm text-white " style="  margin: auto;width: 60% !important; ">
-                                        <thead>
-                                            <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">First</th>
-                                            <th scope="col">Last</th>
-                                            <th scope="col">Handle</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                            <th scope="row">1</th>
-                                            <td><?$_SERVER['SERVER_ADDR']; ?></td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                            </tr>
-                                            <tr>
-                                        </tbody>
-                            </table>
-                            </div>
-                               Mi IP es: <strong id="ipId" class="text-white"></strong>
-                               <br>
-                               Mi IPv6 es : <strong class="text-white" id="ipv6"></strong>
-                          
-                               <br>
-                           
-                               <div id="ip"></div>
-<div id="address"></div>
-<?php $localIP = getHostByName(getHostName());
-echo $localIP;
-echo '<br>';
-
-$command="nslookup web.satt-link.net  ";
-$result = shell_exec($command);
-echo $result;
-$array_text = explode("",$result);
-$oparray = preg_split('/\s+/', trim($result));
-echo '<br>';
-var_dump($oparray);
-echo '<br>';
-echo $array_text[1];
-
-
-
-echo "<br>";
-
-if ( defined('AF_INET6') ) {
-    echo 'Yes';
-} else {
-    echo 'No';
-}
-
-?>
-<pre id="details"></pre>
-                            </div>
-
-                        </div>
                     </div>
                 </div>
-                <!-- <div class="row">
+                <div class="col-lg-4">
+                    <div class="">
+                        <img class="img-fluid d-block mx-auto" heigth="50px" width="200px" src="./logos/wispmx-logo.png" style=" background-position: center; margin-left: auto; margin-top: 20px;
+                            margin-right: auto; " alt="" />
+
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="row  ">
+
+                <!-- script de php -->
+                <?php
+
+                $command = "nslookup web.satt-link.net  ";
+                $result = shell_exec($command);
+                echo $result;
+                $array_text = explode("", $result);
+                $oparray = preg_split('/\s+/', trim($result));
+                echo '<br>';
+                var_dump($oparray);
+                ?>
+                <div class="col-lg-12 ">
+
+                    <div class="text-white ">
+                        <div class="table-responsive">
+                            <table class="table table-sm text-white  table-bordered" style="  margin: auto;width: 40% !important; ">
+                                <thead>
+                                <th>Información</th>
+                               
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 20%;">Ipv6 del servidor</td>
+                                        <td><? $oparray[13] ?></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td >Ipv4 del servidor:</td>
+                                        <td><? $oparray[11] ?></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td >Tu IPv6</td>
+                                        <td><p id="ipv6"> </p></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <th >Tu IPv6</th>
+                                        <td style="text-align: left;"><div style="text-align: left;" id="ipv6"> </div></td>
+                                        
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td >HostName</td>
+                                        <td><p id="hostname"> </p></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td >ISP</td>
+                                        <td><p id="isp"> </p></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td >Ciudad</td>
+                                        <td><p id="ciudad"> </p></td>
+                                        
+                                    </tr>
+                                   
+
+                                </tbody>
+                            </table>
+                        </div>
+                        Mi IP es: <strong id="ipId" class="text-white"></strong>
+                        <br>
+                        Mi IPv6 es : <strong class="text-white" id="ipv6"></strong>
+
+                        <br>
+
+                        <div id="ip"></div>
+                        <div id="address"></div>
+                        <?php $localIP = getHostByName(getHostName());
+                        echo $localIP;
+                        echo '<br>';
+
+                        echo '<br>';
+                        echo $array_text[1];
+
+
+
+                        echo "<br>";
+
+                        if (defined('AF_INET6')) {
+                            echo 'Yes';
+                        } else {
+                            echo 'No';
+                        }
+
+                        ?>
+                        <pre id="details"></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row">
                     <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
                 </div> -->
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <script type="text/javascript">
-            function get_ip(obj){
-                document.getElementById('ipId').innerHTML = obj.ip;
-            }
+    <script type="text/javascript">
+        function get_ip(obj) {
+            document.getElementById('ipId').innerHTML = obj.ip;
+        }
 
 
-           function get_ipv6(obj){
+        function get_ipv6(obj) {
             document.getElementById('ipv6').innerHTML = obj.ip;
-           }
-        </script>
-        <script type="text/javascript" src="https://api.ipify.org/?format=jsonp&callback=get_ip"></script>
-        <script type="text/javascript" src="https://api6.ipify.org/?format=jsonp&callback=get_ipv6"></script>
-      </body>
-     
-        <!-- Clients-->
-      <!--   <div class="py-5">
+        }
+    </script>
+    <script type="text/javascript" src="https://api.ipify.org/?format=jsonp&callback=get_ip"></script>
+    <script type="text/javascript" src="https://api6.ipify.org/?format=jsonp&callback=get_ipv6"></script>
+</body>
+
+<!-- Clients-->
+<!--   <div class="py-5">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-6 my-3">
@@ -391,8 +419,8 @@ if ( defined('AF_INET6') ) {
                 </div>
             </div>
         </div> -->
-        <!-- Contact-->
-      <!--   <section class="page-section" id="contact">
+<!-- Contact-->
+<!--   <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Contact Us</h2>
@@ -428,8 +456,8 @@ if ( defined('AF_INET6') ) {
                 </form>
             </div>
         </section> -->
-        <!-- Footer-->
-       <!--  <footer class="footer py-4">
+<!-- Footer-->
+<!--  <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-4 text-lg-left">Copyright © Your Website 2020</div>
@@ -445,32 +473,36 @@ if ( defined('AF_INET6') ) {
                 </div>
             </div>
         </footer> -->
-        <!-- Portfolio Modals-->
-     
-            
-        <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Contact form JS-->
-        <script src="assets/mail/jqBootstrapValidation.js"></script>
-        <script src="assets/mail/contact_me.js"></script>
-        <!-- Core theme JS-->
-      <!--   <script src="js/scripts.js"></script> -->
+<!-- Portfolio Modals-->
 
-    <!--   <script>
+
+<!-- Bootstrap core JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+<!-- Third party plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<!-- Contact form JS-->
+<script src="assets/mail/jqBootstrapValidation.js"></script>
+<script src="assets/mail/contact_me.js"></script>
+<!-- Core theme JS-->
+<!--   <script src="js/scripts.js"></script> -->
+
+<!--   <script>
           $.getJSON('getip.php', function(data){
      console.log('Your ip is: ' +  data.ip);
 });
       </script> -->
 
-      <script>
-$.get("https://ipinfo.io", function (response) {
-    $("#ip").html("IP: " + response.ip);
-    $("#address").html("Ubicaci&#243;n: " + response.city + ", " + response.region);
-    $("#details").html(JSON.stringify(response, null, 4));
-}, "jsonp");
+<script>
+    $.get("https://ipinfo.io", function(response) {
+        $("#ip").html("IP: " + response.ip);
+        $("#address").html("Ubicaci&#243;n: " + response.city + ", " + response.region);
+        $("#details").html(JSON.stringify(response, null, 4));
+        $("#hostname").html(response.hostname);
+        $("#isp").html(response.org);
+        $("#ciudad").html(response.city);
+    }, "jsonp");
 </script>
-    </body>
+</body>
+
 </html>

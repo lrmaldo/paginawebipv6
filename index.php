@@ -18,14 +18,14 @@
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 
-<body id="page-top" style="background: blue ">
+<body id="page-top" >
     <div>
 
 
 
     </div>
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+   <!--  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="" /></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +43,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> -->
     <!-- Masthead-->
     <!--     <header class="masthead">
             <div class="container">
@@ -246,7 +246,7 @@
         </section> -->
     <!-- Team-->
     <section class="" style="" id="team">
-        <div class="container" style="background: rgba(0, 0, 0, 0.5); height:300px;">
+        <div class="container" style="background: rgba(0, 0, 0, 0.5); height:auto;">
             <!--  <div class="text-center">
                     <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
@@ -291,23 +291,20 @@
 
                 $command = "nslookup web.satt-link.net  ";
                 $result = shell_exec($command);
-                echo $result;
-                $array_text = explode("", $result);
+              /*   echo $result; */
+                
                 $oparray = preg_split('/\s+/', trim($result));
-                echo '<br>';
-                var_dump($oparray[13]);
-                echo '<br>';
-                echo $oparray[13];
+                /* echo '<br>'; */
+              /*   var_dump($oparray[13]); */
+               /*  echo '<br>';
+                echo $oparray[13]; */
                 ?>
                 <div class="col-lg-12 ">
 
                     <div class="text-white ">
                         <div class="table-responsive">
-                            <table class="table table-sm text-white  table-bordered" style="  margin: auto;width: 40% !important; ">
-                                <thead>
-                                <th>Información</th>
+                            <table class="table table-sm text-white " style="  margin: auto;width: 40% !important; ">
                                
-                                </thead>
                                 <tbody>
                                     <tr>
                                         <td style="width: 20%;">Ipv6 del servidor</td>
@@ -351,33 +348,8 @@
                                 </tbody>
                             </table>
                         </div>
-                        Mi IP es: <strong id="ipId" class="text-white"></strong>
-                        <br>
-                        Mi IPv6 es : <strong class="text-white" id="ipv6"></strong>
+                       
 
-                        <br>
-
-                        <div id="ip"></div>
-                        <div id="address"></div>
-                        <?php $localIP = getHostByName(getHostName());
-                        echo $localIP;
-                        echo '<br>';
-
-                        echo '<br>';
-                        echo $array_text[1];
-
-
-
-                        echo "<br>";
-
-                        if (defined('AF_INET6')) {
-                            echo 'Yes';
-                        } else {
-                            echo 'No';
-                        }
-
-                        ?>
-                        <pre id="details"></pre>
                     </div>
 
                 </div>
@@ -390,12 +362,17 @@
     </section>
 
     <script type="text/javascript">
+    var if_ip;
         function get_ip(obj) {
             document.getElementById('ipId').innerHTML = obj.ip;
+            if_ip =obj.ip;
         }
 
 
         function get_ipv6(obj) {
+            if(if_ip=== obj.ip){
+                document.getElementById('ipv6').innerHTML= "?";    
+            }
             document.getElementById('ipv6').innerHTML = obj.ip;
         }
     </script>
@@ -505,6 +482,28 @@
         $("#isp").html(response.org);
         $("#ciudad").html(response.city);
     }, "jsonp");
+$(document).ready(function(){
+    function random(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    var spec = {
+        backgrounds: [
+           '1.jpg',
+           '2.jpg',
+           '3.jpg',
+           '4.jpg',
+           '5.jpg',
+         
+        ]
+    };
+    var i = random(0, spec.backgrounds.length - 1);
+    var b = spec.backgrounds[i];
+    $('body').css('background-image', 'url("img/' + b + '")');
+    $('body').css('background-size','contain');
+
+});
+    
 </script>
 </body>
 

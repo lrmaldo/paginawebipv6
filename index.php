@@ -363,7 +363,7 @@ function get_local_ipv4() {
   }
   
   $addrs = get_local_ipv4();
-  var_export($addrs);
+  echo var_export($addrs);
 ?>
 <pre id="details"></pre>
                             </div>

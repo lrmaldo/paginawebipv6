@@ -317,7 +317,7 @@
                                     </tr>
                                     <tr>
                                         <td >Ipv4 del servidor:</td>
-                                        <td><? var_dump($oparray[9]); ?></td>
+                                        <td><?php echo $oparray[9]; ?></td>
                                         
                                     </tr>
                                     <tr>

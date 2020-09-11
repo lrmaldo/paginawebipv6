@@ -295,7 +295,7 @@
                 </div> -->
             </div>
         </section>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
         <script type="text/javascript">
             function get_ip(obj){
                 document.getElementById('ipId').innerHTML = obj.ip;
@@ -574,5 +574,11 @@
         <script src="assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
       <!--   <script src="js/scripts.js"></script> -->
+
+      <script>
+          $.getJSON('getip.php', function(data){
+     console.log('Your ip is: ' +  data.ip);
+});
+      </script>
     </body>
 </html>

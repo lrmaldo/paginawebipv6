@@ -1,18 +1,3 @@
-<?php
-if (!empty($_SERVER['HTTP_CLIENT_IP']))
-{
-     $ip=$_SERVER['HTTP_CLIENT_IP'];
-}
-elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
-{
-     $ip=$_SERVER['HTTP_X_FORWARDED_FOR'];
-}
-else
-{
-     $ip=$_SERVER['REMOTE_ADDR'];
-}
-print json_encode(array('ip' => $ip));
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +18,25 @@ print json_encode(array('ip' => $ip));
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top"style="background: blue ">
+<div>
+
+<?php
+if (!empty($_SERVER['HTTP_CLIENT_IP']))
+{
+     $ip=$_SERVER['HTTP_CLIENT_IP'];
+}
+elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
+{
+     $ip=$_SERVER['HTTP_X_FORWARDED_FOR'];
+}
+else
+{
+     $ip=$_SERVER['REMOTE_ADDR'];
+}
+print json_encode(array('ip' => $ip));
+?>
+
+</div>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">

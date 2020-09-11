@@ -332,14 +332,14 @@ echo $_SERVER['HTTP_HOST'];
 echo "<br>";
 echo $_SERVER['HTTP_REFERER'];
 echo "<br>";
-echo $_SERVER['HTTP_USER_AGENT'];
+echo $_SERVER['HTTP_X_FORWARDED_FOR'];
 echo "<br>";
 echo $_SERVER['SCRIPT_NAME'];
 echo "<br>";
 echo $_SERVER['SERVER_ADDR'];
 echo "<br> ip del cliente";
 echo $_SERVER['REMOTE_ADDR'];
-
+echo "<br>";
 $command="/sbin/ifconfig vlan704 | grep 'inet6' | awk '/inet6/{print $2}' ";
 echo $localIP;
 $primer_resultado = explode(" ",$localIP);

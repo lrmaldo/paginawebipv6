@@ -325,8 +325,8 @@
 echo $localIP;
 echo '<br>';
 
-$command="/sbin/nslookup web.satt-link.net  ";
-$localIPa = exec ($command);
+$command="nslookup web.satt-link.net  ";
+echo shell_exec($command);
 
 echo $localIPa;
 echo "<br>";

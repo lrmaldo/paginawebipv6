@@ -326,7 +326,12 @@ echo $localIP;
 echo '<br>';
 
 $command="nslookup web.satt-link.net  ";
-echo shell_exec($command);
+$result = shell_exec($command);
+echo $result;
+$array_text = explode(" ",$result);
+echo '<br>';
+echo $array_text[1];
+
 
 echo $localIPa;
 echo "<br>";

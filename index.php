@@ -322,7 +322,11 @@
                                <div id="ip"></div>
 <div id="address"></div>
 <?php $localIP = getHostByName(getHostName());
-echo $localIP?>
+echo $localIP;
+$command="/sbin/ifconfig eth0 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'";
+$localIP = exec ($command);
+echo $localIP;
+?>
 <pre id="details"></pre>
                             </div>
 

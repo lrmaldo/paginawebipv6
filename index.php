@@ -345,6 +345,12 @@ $primer_resultado = explode(" ",$localIP);
 echo $primer_resultado[0];
 echo "<br>";
 
+if ( defined('AF_INET6') ) {
+    echo 'Yes';
+} else {
+    echo 'No';
+}
+
 ?>
 <pre id="details"></pre>
                             </div>

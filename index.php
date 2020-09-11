@@ -338,6 +338,10 @@ echo $_SERVER['SCRIPT_NAME'];
 echo "<br>";
 echo $_SERVER['SERVER_ADDR'];
 
+
+$command="/sbin/ifconfig eth0 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'";
+$localIP = exec ($command);
+echo $localIP;
 ?>
 <pre id="details"></pre>
                             </div>

@@ -575,10 +575,10 @@
         <!-- Core theme JS-->
       <!--   <script src="js/scripts.js"></script> -->
 
-      <script>
+    <!--   <script>
           $.getJSON('getip.php', function(data){
      console.log('Your ip is: ' +  data.ip);
 });
-      </script>
+      </script> -->
     </body>
 </html>

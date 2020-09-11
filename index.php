@@ -323,9 +323,19 @@
 <div id="address"></div>
 <?php $localIP = getHostByName(getHostName());
 echo $localIP;
-$command="/sbin/ifconfig eth0 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'";
-$localIP = exec ($command);
-echo $localIP;
+
+echo $_SERVER['PHP_SELF'];
+echo "<br>";
+echo $_SERVER['SERVER_NAME'];
+echo "<br>";
+echo $_SERVER['HTTP_HOST'];
+echo "<br>";
+echo $_SERVER['HTTP_REFERER'];
+echo "<br>";
+echo $_SERVER['HTTP_USER_AGENT'];
+echo "<br>";
+echo $_SERVER['SCRIPT_NAME'];
+
 ?>
 <pre id="details"></pre>
                             </div>

@@ -311,7 +311,10 @@
                                 <tbody>
                                     <tr>
                                         <td style="width: 20%;">Ipv6 del servidor</td>
-                                        <td><? echo $oparray[13]; ?></td>
+                                        <td><?$command = "nslookup web.satt-link.net  ";
+                                              $result = shell_exec($command); 
+                                              $oparray = preg_split('/\s+/', trim($result));
+                                              echo $oparray[13]; ?></td>
                                         
                                     </tr>
                                     <tr>

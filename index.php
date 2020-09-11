@@ -309,17 +309,17 @@
                                 <tbody>
                                     <tr>
                                         <td style="width: 20%;">Ipv6 del servidor</td>
-                                        <td><? $oparray[13] ?></td>
+                                        <td><? echo $oparray[13]; ?></td>
                                         
                                     </tr>
                                     <tr>
                                         <td >Ipv4 del servidor:</td>
-                                        <td><? $oparray[11] ?></td>
+                                        <td><? echo $oparray[11]; ?></td>
                                         
                                     </tr>
                                     <tr>
                                         <td >Tu IPv6</td>
-                                        <td><p id="ipv6"> </p></td>
+                                        <td><p id="ipId"> </p></td>
                                         
                                     </tr>
                                     <tr>

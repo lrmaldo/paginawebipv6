@@ -339,10 +339,10 @@ echo "<br>";
 echo $_SERVER['SERVER_ADDR'];
 
 
-$command="/sbin/ifconfig vlan704 | grep 'inet6'";
-$localIP = exec ($command);
+$command="/sbin/ifconfig vlan704 | grep 'inet6' | awk '/inet6/{print $2}' ";
 echo $localIP;
-
+$primer_resultado = explode(" ",$localIP);
+echo $primer_resultado;
 echo "<br>";
 
 ?>

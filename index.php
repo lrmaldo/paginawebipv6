@@ -273,7 +273,7 @@
                             <div class="text-white">
                                 Mi IP es: <strong id="ipId" class="text-white"></strong>
                                 <br>
-                            <?php
+                            <?
                           /*   if(isset($_SERVER['HTTP_X_FORWARDED_FOR']) && $_SERVER['HTTP_X_FORWARTDED_FOR'] != '') {
                                 $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
                             } else {

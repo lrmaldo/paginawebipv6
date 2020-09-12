@@ -275,32 +275,7 @@
                                 <br>
                             <?php  echo $_SERVER['REMOTE_ADDR'] ?>
                             <br>
-                            <?php // Known prefix
-$v4mapped_prefix_hex = '00000000000000000000ffff';
-$v4mapped_prefix_bin = pack("H*", $v4mapped_prefix_hex);
-
-// Or more readable when using PHP >= 5.4
-# $v4mapped_prefix_bin = hex2bin($v4mapped_prefix_hex); 
-
-// Parse
-$addr = $_SERVER['REMOTE_ADDR'];
-$addr_bin = inet_pton($addr);
-if( $addr_bin === FALSE ) {
-  // Unparsable? How did they connect?!?
-  die('Invalid IP address');
-}
-
-// Check prefix
-if( substr($addr_bin, 0, strlen($v4mapped_prefix_bin)) == $v4mapped_prefix_bin) {
-  // Strip prefix
-  $addr_bin = substr($addr_bin, strlen($v4mapped_prefix_bin));
-}
-
-// Convert back to printable address in canonical form
-$addr = inet_ntop($addr_bin); 
-
-echo $addr;
-?>
+                           
                             </div>
 
                         </div>

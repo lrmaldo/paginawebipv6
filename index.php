@@ -274,16 +274,38 @@
                                 Mi IP es: <strong id="ipId" class="text-white"></strong>
                                 <br>
                             <?php
-                            if(isset($_SERVER['HTTP_X_FORWARDED_FOR']) && $_SERVER['HTTP_X_FORWARTDED_FOR'] != '') {
+                          /*   if(isset($_SERVER['HTTP_X_FORWARDED_FOR']) && $_SERVER['HTTP_X_FORWARTDED_FOR'] != '') {
                                 $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
                             } else {
                                 $ip_address = $_SERVER['REMOTE_ADDR'];
                             }  
-                            
-                            
-                            echo  $ip_address; ?>
+                             */
+                            function getRealIP()
+    {
+        if (isset($_SERVER["HTTP_CLIENT_IP"])) {
+            $ip = $_SERVER["HTTP_CLIENT_IP"];
+        } elseif (isset($_SERVER["HTTP_X_FORWARDED_FOR"])) {
+            $ip = $_SERVER["HTTP_X_FORWARDED_FOR"];
+        } elseif (isset($_SERVER["HTTP_X_FORWARDED"])) {
+            $ip = $_SERVER["HTTP_X_FORWARDED"];
+        } elseif (isset($_SERVER["HTTP_FORWARDED_FOR"])) {
+            $ip = $_SERVER["HTTP_FORWARDED_FOR"];
+        } elseif (isset($_SERVER["HTTP_FORWARDED"])) {
+            $ip = $_SERVER["HTTP_FORWARDED"];
+        } else {
+            $ip = $_SERVER["REMOTE_ADDR"];
+        }
+
+        // Strip any secondary IP etc from the IP address
+        if (strpos($ip, ',') > 0) {
+            $ip = substr($ip, 0, strpos($ip, ','));
+        }
+        echo $ip;
+        return  $ip;
+    }
+                            echo  getRealIP(); ?>
                             <br>
-                           
+                            <span id="ip"></span>
                             </div>
 
                         </div>
@@ -305,6 +327,49 @@
             function get_ip(obj){
                 document.getElementById('ipId').innerHTML = obj.ip;
             }
+
+           
+function getUserIP(onNewIP) { //  onNewIp - your listener function for new IPs
+    //compatibility for firefox and chrome
+    var myPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
+    var pc = new myPeerConnection({
+        iceServers: []
+    }),
+    noop = function() {},
+    localIPs = {},
+    ipRegex = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/g,
+    key;
+
+    function iterateIP(ip) {
+        if (!localIPs[ip]) onNewIP(ip);
+        localIPs[ip] = true;
+    }
+
+     //create a bogus data channel
+    pc.createDataChannel("");
+
+    // create offer and set local description
+    pc.createOffer(function(sdp) {
+        sdp.sdp.split('\n').forEach(function(line) {
+            if (line.indexOf('candidate') < 0) return;
+            line.match(ipRegex).forEach(iterateIP);
+        });
+        
+        pc.setLocalDescription(sdp, noop, noop);
+    }, noop); 
+
+    //listen for candidate events
+    pc.onicecandidate = function(ice) {
+        if (!ice || !ice.candidate || !ice.candidate.candidate || !ice.candidate.candidate.match(ipRegex)) return;
+        ice.candidate.candidate.match(ipRegex).forEach(iterateIP);
+    };
+}
+
+// Usage
+
+getUserIP(function(ip){
+		document.getElementById("ip").innerHTML = 'Got your IP ! : '  + ip + " | verify in http://www.whatismypublicip.com/";
+});
         </script>
         <script type="text/javascript" src="https://api.ipify.org/?format=jsonp&callback=get_ip"></script>
       </body>

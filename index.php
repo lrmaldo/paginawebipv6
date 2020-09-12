@@ -273,37 +273,25 @@
                             <div class="text-white">
                                 Mi IP es: <strong id="ipId" class="text-white"></strong>
                                 <br>
-                            <?
+                            <?php
                           /*   if(isset($_SERVER['HTTP_X_FORWARDED_FOR']) && $_SERVER['HTTP_X_FORWARTDED_FOR'] != '') {
                                 $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
                             } else {
                                 $ip_address = $_SERVER['REMOTE_ADDR'];
                             }  
                              */
-                            function getRealIP()
-    {
-        if (isset($_SERVER["HTTP_CLIENT_IP"])) {
-            $ip = $_SERVER["HTTP_CLIENT_IP"];
-        } elseif (isset($_SERVER["HTTP_X_FORWARDED_FOR"])) {
-            $ip = $_SERVER["HTTP_X_FORWARDED_FOR"];
-        } elseif (isset($_SERVER["HTTP_X_FORWARDED"])) {
-            $ip = $_SERVER["HTTP_X_FORWARDED"];
-        } elseif (isset($_SERVER["HTTP_FORWARDED_FOR"])) {
-            $ip = $_SERVER["HTTP_FORWARDED_FOR"];
-        } elseif (isset($_SERVER["HTTP_FORWARDED"])) {
-            $ip = $_SERVER["HTTP_FORWARDED"];
-        } else {
-            $ip = $_SERVER["REMOTE_ADDR"];
-        }
-
-        // Strip any secondary IP etc from the IP address
-        if (strpos($ip, ',') > 0) {
-            $ip = substr($ip, 0, strpos($ip, ','));
-        }
-        echo $ip;
-        return  $ip;
-    }
-                            echo  getRealIP(); ?>
+                            $time = date( 'd-m-Y' ); // Get the current date, in the format of: 12-12-2006
+                            $timestamp = time();
+                            
+                            $ip = $_SERVER['REMOTE_ADDR'];
+                            //Log $ip here
+                            
+                            if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+                                $forwardedIP = $_SERVER['HTTP_X_FORWARDED_FOR'];
+                                //Log $forwardedIP here
+                                echo $forwardedIP;
+                            }
+                            echo  $ip ?>
                             <br>
                             <span id="ip"></span>
                             </div>

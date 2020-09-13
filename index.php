@@ -8,6 +8,9 @@
                                               else {
                                                 //echo "ip no valido";
                                               }
+
+                                              
+                                              echo (int) defined ('AF_INET6');
                                         ?>
 
 <!DOCTYPE html>
@@ -119,7 +122,7 @@
                                                 echo $_SERVER['REMOTE_ADDR'];
                                               }
                                               else {
-                                                echo "ip no valido";
+                                                echo "tu ip no es version 6";
                                               }
                                         ?></td>
                                         

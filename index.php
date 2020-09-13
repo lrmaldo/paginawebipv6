@@ -126,6 +126,35 @@
                                               }
                                         ?></td>
                                         
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td >Tu IPv6</td>
+                                        <td><?php  
+                                        $ip =  $_SERVER['HTTP_CLIENT_IP'];
+                                            if(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
+                                                echo $ip;
+                                              }
+                                              else {
+                                                echo "tu ip no es version 6";
+                                              }
+                                        ?></td>
+                                        
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td >Tu IPv6</td>
+                                        <td><?php  
+                                        $ip =  $_SERVER['HTTP_X_FORWARDED_FOR'];
+                                            if(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
+                                                echo $ip;
+                                              }
+                                              else {
+                                                echo "tu ip no es version 6";
+                                              }
+                                        ?></td>
+                                        
+                                        
                                     </tr>
                                     <tr>
                                         <th >Tu IPv6</th>

@@ -1,17 +1,4 @@
-<?php  
 
-/* redireccionar si el cliente no cuenta con ipv6 */
-                                        $ip =  $_SERVER['REMOTE_ADDR'];
-                                            if(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
-                                                //echo $_SERVER['REMOTE_ADDR'];
-                                              }
-                                              else {
-                                                //echo "ip no valido";
-                                              }
-
-                                              
-                                              echo (int) defined ('AF_INET6');
-                                        ?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -35,6 +22,23 @@
 
 <body id="page-top" >
     <div>
+
+    <?php  
+
+/* redireccionar si el cliente no cuenta con ipv6 */
+                                        $ip =  $_SERVER['REMOTE_ADDR'];
+                                            if(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
+                                                //echo $_SERVER['REMOTE_ADDR'];
+                                              }
+                                              else {
+                                                //echo "ip no valido";
+                                                header("no_ipv6.php");
+                                                die();
+                                              }
+
+                                              
+                                             // echo (int) defined ('AF_INET6');
+                                        ?>
 
 
 
@@ -128,34 +132,7 @@
                                         
                                         
                                     </tr>
-                                    <tr>
-                                        <td >Tu IPv6</td>
-                                        <td><?php  
-                                        $ip =  $_SERVER['HTTP_CLIENT_IP'];
-                                            if(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
-                                                echo $ip;
-                                              }
-                                              else {
-                                                echo "tu ip no es version 6";
-                                              }
-                                        ?></td>
-                                        
-                                        
-                                    </tr>
-                                    <tr>
-                                        <td >Tu IPv6</td>
-                                        <td><?php  
-                                        $ip =  $_SERVER['HTTP_X_FORWARDED_FOR'];
-                                            if(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
-                                                echo $ip;
-                                              }
-                                              else {
-                                                echo "tu ip no es version 6";
-                                              }
-                                        ?></td>
-                                        
-                                        
-                                    </tr>
+                                   <!--  -->
                                     <tr>
                                         <th >Tu IPv6</th>
                                         <td style="text-align: left;"><div style="text-align: left;" id="ipv6"> </div></td>

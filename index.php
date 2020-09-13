@@ -133,13 +133,13 @@
                                         
                                     </tr>
                                    <!--  -->
-                                    <tr>
+                                    <!-- <tr>
                                         <th >Tu IPv6</th>
                                         <td style="text-align: left;"><div style="text-align: left;" id="ipv6"> </div></td>
                                         
                                         
                                     </tr>
-                                    <tr>
+                                    <tr> -->
                                         <td >HostName</td>
                                         <td><p id="hostname"> </p></td>
                                         
